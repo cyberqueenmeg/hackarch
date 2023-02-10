@@ -5,7 +5,7 @@ RUN pacman -Syyuu --noconfirm --needed --overwrite='*'
 
 RUN touch /root/.ssh/known_hosts
 RUN ssh-keyscan bitbucket.org >> /root/.ssh/known_hosts
-#RUN ssh-keyscan github.com >> /root/.ssh/known_hosts
+RUN ssh-keyscan github.com >> /root/.ssh/known_hosts
 
 RUN curl -O https://blackarch.org/strap.sh
 RUN chmod +x strap.sh
